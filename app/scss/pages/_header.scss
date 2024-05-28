@@ -1,0 +1,137 @@
+header{
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 99999;
+    background: $white;
+}
+.announcement {
+    background: $pc;
+    padding: rem(10px) 0;
+
+    &-bar {
+
+        @include flex(f, ac, jb);
+
+        i {
+            color: $white;
+            font-size: rem(20px);
+        }
+
+        span,
+        a {
+            display: block;
+            text-decoration: unset;
+            @include typo(rem(14px), 300, $white, rem(14px));
+        }
+
+        .contact-info {
+            @include flex(f, ac, jb);
+            gap: rem(50px);
+
+            .address,
+            .call {
+                @include flex(f, ac, js);
+                gap: rem(15px);
+            }
+        }
+
+        .social-info {
+            @include flex(f, ac, jb);
+            gap: rem(15px);
+
+            i {
+                font-size: rem(20px);
+            }
+        }
+    }
+}
+
+
+
+
+.navbar {
+    @include flex(f, ac, jb);
+    flex-wrap: wrap;
+    padding: rem(15px) 0;
+
+    &-brand {
+        .logo {
+            display: block;
+            width: rem(110px);
+            height: auto;
+        }
+    }
+
+    .collapse {
+        display: none;
+        gap: rem(70px);
+    }
+
+    .collapse.show {
+        display: flex;
+    }
+
+    .navbar-toggler {
+        padding: 0.25rem 0.75rem;
+        font-size: 1.25rem;
+        line-height: 1;
+        background-color: transparent;
+        border: 1px solid transparent;
+        border-radius: 0.25rem;
+
+        &-icon {
+            display: inline-block;
+            width: 1.5em;
+            height: 1.5em;
+            vertical-align: middle;
+            content: "";
+            background: no-repeat center center;
+            background-size: 100% 100%;
+        }
+    }
+
+    .navbar-nav {
+        @include flex(f, ac, jb, dr);
+        padding-left: 0;
+        margin-bottom: 0;
+        list-style: none;
+
+        .nav-item {
+            display: list-item;
+
+            .nav-link {
+                @include typo(rem(14px), 400, #4A5568, rem(24px));
+                display: block;
+                padding: 0.5rem 1rem;
+                text-decoration: none;
+
+                &.active {
+                    font-weight: $font-b;
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+
+    .search-div {
+        position: relative;
+
+        .search {
+            @include typo(rem(14px), 400, #1E1E1E, rem(14px));
+            border: 1px solid #1E1E1E;
+            border-radius: 8px;
+            max-width: rem(200px);
+            padding: rem(8px) rem(15px);
+        }
+
+        .fa-magnifying-glass {
+            font-size: rem(16px);
+            position: absolute;
+            top: 45%;
+            right: rem(10px);
+            transform: translate(0, -45%);
+        }
+    }
+}

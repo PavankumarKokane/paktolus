@@ -1,0 +1,32 @@
+@include max(d-1400) {
+    html,
+    body {
+        $rem-size: 16px;
+        font-size: $rem-size;
+    }
+    // .container,
+    // .container-lg,
+    // .container-md,
+    // .container-sm,
+    // .container-xl,
+    // .container-xxl {
+    //     max-width: rem(calc(1088px + 24px));
+    // }
+}
+
+@include max(d-768) {
+    .container,
+    .container-lg,
+    .container-md,
+    .container-sm,
+    .container-xl,
+    .container-xxl {
+        max-width: rem(calc(1088px + 24px));
+    }
+}
+
+@media (max-width: 600px) {
+    html,body{
+        font-size: 16px;
+    }
+}

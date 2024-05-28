@@ -1,0 +1,156 @@
+@include max(d-640) {
+    .banner {
+        &-content {
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+
+            .content-wrapper {
+                width: 100%;
+                text-align: center;
+
+                p {
+                    @include typo(mrem(14px), 300, $white, mrem(26px));
+                }
+            }
+        }
+    }
+
+    .features-sec {
+        padding: mrem(50px) 0 mrem(25px);
+
+        .features-wrapper {
+            .features-point {
+                flex-direction: column;
+
+                &:nth-child(2n) {
+                    flex-direction: column;
+                }
+
+                p {
+                    @include typo(mrem(14px), 300, #000, mrem(24px));
+
+                }
+
+                .tags-div {
+                    p {
+                        @include typo(mrem(14px), 300, #000, mrem(24px));
+                    }
+                }
+            }
+        }
+    }
+
+    .slider-section {
+        padding: mrem(25px) 0;
+
+        .tab-arrow-wrapper {
+            .tab-wrapper {
+                .tab {
+                    overflow-x: scroll;
+                    overflow-y: hidden;
+                    padding-bottom: mrem(20px);
+
+                    a.tab-link {
+                        @include typo(mrem(14px), 300, #000, mrem(24px));
+                        text-wrap: nowrap;
+                        white-space: nowrap;
+                        padding: mrem(10px) mrem(20px);
+                    }
+                }
+            }
+
+            .arrow-wrapper {
+                margin: 0 mrem(20px) mrem(20px);
+
+                .arrow-btn {
+                    height: mrem(40px);
+                    width: mrem(40px);
+                }
+            }
+        }
+
+        .slider-slider-wrapper {
+            .slide-card {
+                .info-wrapper {
+                    h4 {
+                        @include typo(mrem(20px), $font-r, #000, mrem(28px));
+                    }
+
+                    .location-price-wrapper {
+                        p {
+                            @include typo(mrem(14px), $font-r, #000, mrem(24px));
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .contact-sec {
+        padding: mrem(25px) 0 mrem(50px);
+
+        .form-wrapper {
+            flex-direction: column;
+
+            .contact-info,
+            .form-div {
+                width: 100%;
+                flex: 0 0 100%;
+            }
+
+            .contact-info {
+                padding: mrem(30px);
+
+                h4 {
+                    @include typo(mrem(22px), $font-sb, $white, mrem(28px));
+                }
+
+                p {
+                    @include typo(mrem(14px), 300, $white, mrem(24px));
+                }
+
+                .contact-wrapper {
+                    margin-top: mrem(20px);
+
+                    .contact-line {
+
+                        a,
+                        span {
+                            @include typo(mrem(14px), 300, $white, mrem(24px));
+                        }
+                    }
+                }
+            }
+
+            .form-div {
+                padding: mrem(30px);
+
+                form {
+                    .form-controls {
+                        grid-template-columns: repeat(1, 1fr);
+
+                        .form-box {
+                            label {
+                                @include typo(mrem(14px), $font-m, #000, mrem(24px));
+                            }
+                            input,textarea{
+                                @include typo(mrem(14px), $font-m, #000, mrem(24px));
+                            }
+                            &.inquiry-box{
+                                label{
+                                    @include typo(mrem(14px), $font-m, #000, mrem(24px));
+                                }
+                                .inquiry-list{
+                                    label{
+                                        @include typo(mrem(12px), $font-m, #000, mrem(24px));
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

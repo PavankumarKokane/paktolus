@@ -1,0 +1,66 @@
+.pc {
+    color: $pc;
+}
+
+.sc {
+    color: $sc;
+}
+
+.blue-btn{
+    display: inline-flex;
+    @include typo(rem(18px), $font-r, $white, rem(28px));
+    background-color: $pc;
+    padding: rem(10px) rem(40px);
+    border-radius: rem(25px);
+    text-decoration: none;
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    &:hover, &:focus{
+        color: $white;
+    }
+}
+
+.gray-btn{
+    display: inline-flex;
+    @include typo(rem(18px), $font-r, #000, rem(28px));
+    background-color: $white;
+    border: 1px solid #000;
+    padding: rem(10px) rem(40px);
+    border-radius: rem(25px);
+    text-decoration: none;
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    &:hover, &:focus{
+        color: #000;
+    }
+}
+
+.sec-title{
+    @include typo(rem(48px), $font-m, #000, rem(58px));
+    text-align: center;
+}
+.sec-dec{
+    @include typo(rem(18px), $font-m, #717171, rem(28px));
+    text-align: center;
+}
+
+@include max(d-640) {
+    .sec-title{
+        @include typo(mrem(26px), $font-m, #000, mrem(36px));
+    }
+    .sec-dec{
+        @include typo(mrem(16px), $font-m, #717171, mrem(26px));
+    }
+    .blue-btn{
+        @include typo(mrem(16px), $font-r, $white, mrem(26px));
+        padding: mrem(8px) mrem(25px);
+        border-radius: mrem(50px);
+    }
+    .gray-btn{
+        @include typo(mrem(16px), $font-r, #000, mrem(26px));
+        padding: mrem(8px) mrem(25px);
+        border-radius: mrem(50px);
+    }
+}

@@ -1,0 +1,34 @@
+footer{
+    .footer-links{
+        ul{
+            flex-wrap: wrap;
+            gap: mrem(20px);
+            li{
+                a{
+                    @include typo(mrem(12px), 300, #000, mrem(24px));
+                }
+            }
+        }
+    }
+    .social-div{
+        ul {
+            gap: rem(25px);
+            li a i{
+                font-size: mrem(24px);
+            }
+        }
+    }
+    .copyrights-div{
+        flex-direction: column;
+        gap: mrem(20px);
+        .lang-div{
+            a{
+                @include typo(mrem(12px), 300, #000, mrem(24px));
+                padding: mrem(5px) mrem(20px);
+            }
+        }
+        p{
+            @include typo(mrem(12px), 300, #000, mrem(24px));
+        }
+    }
+}

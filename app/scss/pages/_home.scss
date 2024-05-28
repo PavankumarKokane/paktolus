@@ -1,0 +1,336 @@
+.banner {
+    position: relative;
+
+    &-img {
+        width: 100%;
+        height: calc(100vh - rem(115px));
+        object-fit: cover;
+    }
+
+    &-content {
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 100%;
+
+        .content-wrapper {
+            width: 40%;
+
+            h1 {
+                @include typo(rem(48px), $font-b, $white, rem(58px));
+                margin-bottom: rem(20px);
+            }
+
+            p {
+                @include typo(rem(14px), $font-r, $white, rem(24px));
+                margin-bottom: rem(20px);
+            }
+        }
+    }
+}
+
+.features-sec {
+    padding: rem(100px) 0;
+
+    .features-wrapper {
+        @include flex(f, ac, null, dc);
+        gap: rem(70px);
+        margin-top: rem(50px);
+
+        .features-point {
+            @include flex(f, ac, jb);
+            gap: rem(50px);
+
+            &>div {
+                flex: 1;
+            }
+
+            &:nth-child(2n) {
+                flex-direction: row-reverse;
+            }
+
+            h3 {
+                @include typo(rem(30px), $font-r, #000, rem(40px));
+                margin-bottom: rem(25px)
+            }
+
+            p {
+                @include typo(rem(16px), $font-r, #000, rem(26px));
+                margin-bottom: rem(20px)
+            }
+
+            .tags-div {
+                @include flex(f, ac, null);
+                gap: rem(20px);
+                margin-bottom: rem(30px);
+
+                p {
+                    @include typo(rem(12px), $font-r, #000, rem(24px));
+                    padding: rem(5px) rem(10px);
+                    background: #E1E1E1;
+                    margin: 0;
+                }
+            }
+            .button-wrapper{
+                @include flex(f, ac, null);
+                gap: rem(20px);
+            }
+        }
+    }
+}
+
+
+.slider-section {
+    padding: rem(100px) 0;
+
+    .title-wrapper {
+        h2 {
+            text-align: left;
+        }
+    }
+
+    .tab-arrow-wrapper {
+        margin-top: rem(50px);
+
+        .tab-wrapper {
+            @include flex(f, ac, jb);
+
+            .tab {
+                @include flex(f, ac, null);
+                gap: rem(20px);
+
+                a.tab-link {
+                    @include typo(rem(15px), $font-r, #231E1C, rem(15px));
+                    padding: rem(10px) rem(15px);
+                    background: #E8F3FF;
+                    border-radius: rem(20px);
+                    text-decoration: none;
+                    cursor: pointer;
+
+                    &.active {
+                        background: $pc;
+                        color: $white;
+                    }
+                }
+
+            }
+        }
+
+        .arrow-wrapper {
+            @include flex(f, ac, null);
+            gap: rem(20px);
+
+            .arrow-btn {
+                @include flex(f, ac, jc);
+                cursor: pointer;
+                padding: rem(10px);
+                background: #E8F3FF;
+                border-radius: rem(20px);
+                height: rem(38px);
+                width: rem(38px);
+                text-decoration: none;
+
+                i {
+                    font-size: rem(21px);
+                }
+
+                &:hover {
+                    background: $pc;
+                    color: $white;
+                }
+            }
+        }
+    }
+
+    .slider-slider-wrapper {
+        margin-top: rem(35px);
+
+        .slider-box {
+            display: none;
+
+            &.active {
+                display: block;
+            }
+
+            .slick-slide {
+                margin: 0 rem(10px);
+            }
+        }
+
+        .slide-card {
+            img {
+                width: 100%;
+                height: auto;
+            }
+
+            .info-wrapper {
+                padding-top: rem(20px);
+
+                h4 {
+                    @include typo(rem(24px), $font-r, #000, rem(34px));
+                    margin: 0;
+
+                    i {
+                        font-size: rem(14px);
+                    }
+                }
+
+                .location-price-wrapper {
+                    @include flex(f, ac, jb);
+
+                    p {
+                        @include typo(rem(15px), $font-r, #8D8D8D, rem(25px));
+                        margin: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+.contact-sec {
+    padding: rem(100px) 0;
+
+    .form-wrapper {
+        @include flex(f, null, null);
+        // gap: rem(50px);
+        padding: rem(10px);
+        margin-top: rem(50px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        border-radius: rem(10px);
+
+        &>div {
+            @include flex(f, ac, null);
+        }
+
+        .contact-info {
+            // width: calc(40% - rem(25px));
+            // flex: 0 0 calc(40% - rem(25px));
+            width: 40%;
+            flex: 0 0 40%;
+            background: $pc;
+            border-radius: rem(10px);
+            @include flex(f, as, null, dc);
+            padding: rem(70px) rem(50px);
+
+            h4 {
+                @include typo(rem(28px), $font-sb, $white, rem(38px));
+                margin-bottom: rem(10px);
+            }
+
+            p {
+                @include typo(rem(18px), $font-r, $white, rem(26px));
+                margin-bottom: rem(20px);
+            }
+
+            .contact-wrapper {
+                margin-top: rem(100px);
+
+                .contact-line {
+                    @include flex(f, ac, null);
+                    gap: rem(20px);
+                    margin-bottom: rem(40px);
+
+                    i {
+                        font-size: rem(24px);
+                        color: $white;
+                    }
+
+                    a,
+                    span {
+                        @include typo(rem(16px), $font-r, $white, rem(26px));
+                        margin: 0;
+                        text-decoration: none;
+                    }
+
+                }
+            }
+        }
+
+        .form-div {
+            // width: calc(60% - rem(25px));
+            // flex: 0 0 calc(60% - rem(25px));
+            width: 60%;
+            flex: 0 0 60%;
+            padding: rem(50px);
+
+            form {
+                width: 100%;
+
+                .form-controls {
+                    display: grid;
+                    grid-template-columns: repeat(2, 1fr);
+                    gap: rem(20px);
+
+                    .inquiry-box,
+                    .message-box,
+                    .submit-box {
+                        grid-column: 1 / -1;
+                    }
+
+                    .form-box {
+                        label {
+                            @include typo(rem(14px), $font-m, #000, rem(26px));
+                            margin: 0;
+                        }
+
+                        input {
+                            @include typo(rem(14px), $font-m, #000, rem(26px));
+
+                            &[type="text"],
+                            &[type="email"],
+                            &[type="tel"] {
+                                width: 100%;
+                                border: unset;
+                                border-bottom: 1px solid #000;
+                            }
+
+                            &:hover,
+                            &:focus {
+                                outline: none;
+                            }
+                        }
+
+                        textarea {
+                            @include typo(rem(14px), $font-m, #000, rem(26px));
+                            width: 100%;
+                            border: unset;
+                            border-bottom: 1px solid #000;
+                            &:hover, &:focus {
+                                outline: none;
+                            }
+                        }
+                        &.inquiry-box{
+                            label{
+                                @include typo(rem(16px), $font-sb, #000, rem(26px));
+                                margin-bottom: rem(10px);
+                            }
+                            .inquiry-list{
+                                @include flex(f, ac, null);
+                                flex-wrap: wrap;
+                                gap: rem(20px);
+                                label{
+                                    @include typo(rem(12px), $font-r, #000, rem(26px));
+                                    margin: 0;
+                                }
+                                .type{
+                                    @include flex(f, ac, null); 
+                                    gap: rem(10px);
+                                }
+                            }
+                        }
+                        &.submit-box{
+                            text-align: right;
+                            input{
+                                border: unset;
+                                color: $white;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

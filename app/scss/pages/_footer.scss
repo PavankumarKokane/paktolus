@@ -1,0 +1,73 @@
+footer{
+    background: #F5FAFF;
+    padding: rem(70px) 0 0;
+    .logo-div{
+        .footer-logo{
+            display: block;
+            width: rem(200px);
+            height: auto;
+            margin: 0 auto;
+        }
+    }
+    .footer-links{
+        margin-top: rem(30px);
+        ul{
+            @include flex(f, fs, jc);
+            gap: rem(70px);
+            li{
+                list-style: none;
+                a{
+                    @include typo(rem(14px), $font-r, #535353, rem(14px));
+                    text-decoration: none;
+                    &:hover{
+                        color: $pc;
+                    }
+                }
+            }
+        }
+    }
+    .social-div{
+        margin-top: rem(20px);
+        ul{
+            @include flex(f, ac, jc);
+            gap: rem(15px);
+            li{
+                list-style: none;
+                a{
+                    i{
+                        font-size: rem(20px);
+                        color: #000;
+                    }
+                    &:hover{
+                        i{
+                            color: $pc;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .copyrights-div{
+        margin-top: rem(30px);
+        padding: rem(20px) 0;
+        border-top: 1px solid #E5E5E5;
+        @include flex(f, ac, jb);
+        p{
+            @include typo(rem(14px), $font-r, #535353, rem(14px));
+            margin: 0;
+        }
+        .lang-div{
+            @include flex(f, ac, jc);
+            gap: rem(15px);
+            a{
+                @include typo(rem(14px), $font-r, #535353, rem(14px));
+                text-decoration: none;
+                padding: rem(10px) rem(20px);
+                &.active{
+                    color: $white;
+                    background: $pc;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,37 @@
+:root {
+    // ------Root Color-----
+    --pc: #007DFC;
+    --sc: #F3C342;
+    --body-color: #000;
+    // ------Root Background Color-----
+    --gray-bg: #E8F3FF;
+    --footer-bg: #272727;
+    // ------Common Color-----
+    --white: #FFFFFF;
+    --tf: transparent;
+    // ------Paragraph Color-----
+    --p-color: #000;
+    // ------H1 TO H6 Color-----
+    --h1toh6: #000;
+    // ------Other Color-----
+    --line-light: #E1E1E1;
+    --btn-hover: red;
+}
+
+// ------Root Color-----
+$pc:var(--pc);
+$sc:var(--sc);
+$body-color:var(--body-color);
+// ------Root Background Color-----
+$gray-bg:var(--gray-bg);
+$footer-bg:var(--footer-bg);
+// ------Common Color-----
+$white:var(--white);
+$tf:var(--tf);
+// ------Paragraph Color-----
+$p-color:var(--p-color);
+// ------H1 TO H6 Color-----
+$h1toh6:var(--h1toh6);
+// ------Other Color-----
+$line-light:var(--line-light);
+$btn-hover:var(--btn-hover);
