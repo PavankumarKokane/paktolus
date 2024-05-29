@@ -1,6 +1,9 @@
 @include max(d-640) {
     .banner {
         height: calc(100vh - rem(106px));
+        &-img{
+            height: 100%;
+        }
         &-content {
             left: 50%;
             top: 50%;
