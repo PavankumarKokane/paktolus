@@ -13,6 +13,9 @@
 }
 
 @include max(d-640) {
+    header{
+        box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+    }
     .announcement {
         &-bar {
             flex-direction: column;
@@ -30,11 +33,23 @@
         }
         .collapse{
             flex-direction: column;
+            width: 100%;
+            gap: rem(30px);
         }
         .navbar-nav{
+            flex-direction: column;
             .show{
                 flex-direction: column;
             }
+            .nav-item{
+                margin-bottom: rem(15px);
+                .nav-link{
+                    @include typo(mrem(18px), $font-r, #4a5568, mrem(10px));
+                }
+            }
+        }
+        .search-div{
+            display: none;
         }
     }
 }

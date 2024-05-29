@@ -2,6 +2,9 @@
   "use strict";
 
   $(document).ready(function () {
+
+    var winWd = $(window).width();
+
     var toggler = document.querySelector(".navbar-toggler");
     var collapse = document.querySelector(".collapse");
 
@@ -9,6 +12,12 @@
       var isCollapsed = collapse.classList.contains("show");
       collapse.classList.toggle("show", !isCollapsed);
     });
+
+    if(winWd < 640){
+      $('.nav-link').click(function(){
+        $('.collapse').removeClass('show');
+      });
+    }
 
     $(".nav-link").click(function () {
       $(".nav-link").removeClass("active");
