@@ -175,12 +175,6 @@
       if (utmCampaign) {
         setCookie("utm_new_campaign", utmCampaign, 7);
       }
-      if (utmTerm) {
-        setCookie("utm_new_term", utmTerm, 7);
-      }
-      if (utmContent) {
-        setCookie("utm_new_content", utmContent, 7);
-      }
     }
 
     var utmSource = getCookie("utm_new_source");
@@ -197,7 +191,58 @@
     var utmSource = getCookie("utm_new_source");
     var utmCampaign = getCookie("utm_new_campaign");
     var utmMedium = getCookie("utm_new_medium");
-    var utmTerm = getCookie("utm_new_term");
-    console.log(utmSource, utmCampaign, utmMedium, utmTerm);
+    console.log(utmSource, utmCampaign, utmMedium);
+
+    $(".form-success, .form-error").hide();
+
+    // Form Submit Ajax Call
+    $("#inquiry-form").submit(function (e) {
+      e.preventDefault();
+
+      var form = $(this);
+      const first_name = $("#fname").val();
+      const last_name = $("#lname").val();
+      const email = $("#email").val();
+      const phone = $("#phone").val();
+      const inquiry = $("[name=inquiry]:checked").val();
+      const message = $("#message").val();
+      var formData = {
+        "first_name": `${first_name}`,
+        "last_name": `${last_name}`,
+        "email": `${email}`,
+        "mobile": `${phone}`,
+        "inquiry": `${inquiry}`,
+        "message": `${message}`,
+        "utm_source": `${utmSource}`,
+        "utm_medium": `${utmMedium}`,
+        "utm_campaign": `${utmCampaign}`,
+      };
+
+      console.log(JSON.stringify(formData));
+
+      $.ajax({
+        type: "POST",
+        url: "https://paktolus-backend.vercel.app/api/addlead",
+        data: JSON.stringify(formData),
+        success: function (data) {
+          console.log(data);
+          if (data.response) {
+            $("#inquiry-form").trigger("reset");
+            $(".form-success").show();
+            $(".form-error").hide();
+          } else {
+            $(".form-error").show();
+            $(".form-success").hide();
+          }
+        },
+        error: function (data) {
+          console.log(data);
+          $(".form-error").show();
+          $(".form-success").hide();
+        },
+      });
+    });
+
+
   });
 }.call(window, window.jQuery);
