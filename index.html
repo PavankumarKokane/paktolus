@@ -54,16 +54,16 @@
                 <div class="collapse navbar-collapse">
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item active">
-                            <a class="nav-link active" href="javascript:;">Home</a>
+                            <a class="nav-link active scroll-sec" rel="banner" href="javascript:;">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="javascript:;">About US</a>
+                            <a class="nav-link scroll-sec" rel="contact" href="javascript:;">About US</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="javascript:;">Projects</a>
+                            <a class="nav-link scroll-sec" rel="project" href="javascript:;">Projects</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="javascript:;">Career</a>
+                            <a class="nav-link scroll-sec" rel="features" href="javascript:;">Career</a>
                         </li>
                     </ul>
                     <div class="search-div">
@@ -177,7 +177,7 @@
             </div>
         </section>
 
-        <section class="slider-section">
+        <section class="slider-section" id="project">
             <div class="container">
                 <div class="title-wrapper">
                     <h2 class="sec-title">Lorem ipsum dolor</h2>
@@ -467,12 +467,12 @@
                             <div class="form-controls">
                                 <div class="form-box">
                                     <label for="fname">First Name</label>
-                                    <input type="text" id="fname" name="fname" minlength="3" maxlength="150"
+                                    <input type="text" id="fname" name="fname" class="alpha-only" minlength="3" maxlength="150"
                                         placeholder="Enter First Name" required>
                                 </div>
                                 <div class="form-box">
                                     <label for="lname">Last Name</label>
-                                    <input type="text" id="lname" name="lname" minlength="3" maxlength="150"
+                                    <input type="text" id="lname" name="lname" class="alpha-only" minlength="3" maxlength="150"
                                         placeholder="Enter Last Name" required>
                                 </div>
                                 <div class="form-box">
@@ -481,7 +481,7 @@
                                 </div>
                                 <div class="form-box">
                                     <label for="phone">Phone Number</label>
-                                    <input type="tel" id="phone" name="phone" minlength="10" maxlength="10"
+                                    <input type="tel" id="phone" name="phone" class="numeric-only" minlength="10" maxlength="10"
                                         placeholder="Enter Phone" required>
                                 </div>
                                 <div class="form-box inquiry-box">
@@ -513,11 +513,6 @@
                                     <label for="message">Message</label>
                                     <textarea id="message" name="message" placeholder="Write your message.." rows="3"
                                         minlength="10" maxlength="250"></textarea>
-                                </div>
-                                <div class="hidden-fields">
-                                    <input type="hidden" name="utm_source" value="organic">
-                                    <input type="hidden" name="utm_medium" value="organic">
-                                    <input type="hidden" name="utm_campaign" value="organic">
                                 </div>
                                 <div class="form-box submit-box">
                                     <input type="submit" class="blue-btn" value="Send Message">
