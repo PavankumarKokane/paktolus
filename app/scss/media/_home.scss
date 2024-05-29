@@ -130,6 +130,15 @@
                     .form-controls {
                         grid-template-columns: repeat(1, 1fr);
 
+                        .form-success{
+                            @include typo(mrem(16px), $font-m, green, rem(26px));
+                            margin-top: rem(15px);
+                        }
+                        .form-error{
+                            @include typo(mrem(16px), $font-m, red, rem(26px));
+                            margin-top: rem(15px);
+                        }
+
                         .form-box {
                             label {
                                 @include typo(mrem(14px), $font-m, #000, mrem(24px));

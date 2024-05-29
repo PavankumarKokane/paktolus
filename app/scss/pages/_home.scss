@@ -270,11 +270,18 @@
                         grid-column: 1 / -1;
                     }
 
+                    .form-success{
+                        @include typo(rem(20px), $font-m, green, rem(26px));
+                    }
+                    .form-error{
+                        @include typo(rem(20px), $font-m, red, rem(26px));
+                    }
                     .form-box {
                         label {
                             @include typo(rem(14px), $font-m, #000, rem(26px));
                             margin: 0;
                         }
+
 
                         input {
                             @include typo(rem(14px), $font-m, #000, rem(26px));

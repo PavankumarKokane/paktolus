@@ -225,8 +225,8 @@
         url: "https://paktolus-backend.vercel.app/api/addlead",
         data: JSON.stringify(formData),
         success: function (data) {
-          console.log(data);
-          if (data.response) {
+          const res = JSON.parse(data);
+          if (res.response) {
             $("#inquiry-form").trigger("reset");
             $(".form-success").show();
             $(".form-error").hide();
